@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "10.0" }
-  s.source       = { :git => "", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/bxt-team/releasebird-reactnative-sdk.git", :branch => "master" }
 
-  s.source_files = "releasebird-ios-sdk/releasebird-ios-sdk/relesebird-ios-sdk/**/*.{h,m,mm}"
+  s.source_files = "ios/**/*.{h,m,mm}"
 
   s.dependency "React-Core"
   s.dependency "releasebird-ios-sdk", "1.0.0"
