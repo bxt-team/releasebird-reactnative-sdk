@@ -23,8 +23,8 @@ type ReleasebirdSdkType = {
     identify(userId: string, userProperties: ReleasebirdUserProperty): void;
 };
 
-const ReleasebirdSdk = NativeModules.Gleapsdk
-    ? NativeModules.Gleapsdk
+const ReleasebirdSdk = NativeModules.Releasebirdsdk
+    ? NativeModules.Releasebirdsdk
     : new Proxy(
         {},
         {

@@ -5,6 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
+import ReleasebirdSdk from 'releasebird-reactnative-sdk'
+
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -19,10 +21,12 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
+      ReleasebirdSdk.initialize("2123");
     }
   }, [loaded]);
 
   if (!loaded) {
+
     return null;
   }
 
