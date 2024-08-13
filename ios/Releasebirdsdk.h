@@ -2,6 +2,6 @@
 #import <releasebird-ios-sdk/Relasebird.h>
 #import <React/RCTEventEmitter.h>
 
-@interface Releasebirdsdk : RCTEventEmitter <RCTBridgeModule, ReleasebirdDelegate>
+@interface Releasebirdsdk : RCTEventEmitter <RCTBridgeModule>
 
 @end

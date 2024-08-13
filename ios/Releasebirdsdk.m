@@ -23,17 +23,6 @@ RCT_EXPORT_METHOD(initialize:(NSString *)token)
     });
 }
 
-- (void)initialized {
-
-}
-
-RCT_EXPORT_METHOD(initialize:(NSString *)token)
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-
-    });
-}
-
 RCT_EXPORT_METHOD(identify:(NSString *)userId withUserProperties: (NSDictionary *)userProperties)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
