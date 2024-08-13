@@ -1246,7 +1246,7 @@ PODS:
     - React-utils (= 0.74.5)
   - releasebird-ios-sdk (1.0.3):
     - AFNetworking (~> 4.0.1)
-  - releasebird-reactnative-sdk (1.0.0):
+  - releasebird-reactnative-sdk (1.0.1):
     - React-Core
     - releasebird-ios-sdk (= 1.0.3)
   - RNGestureHandler (2.16.2):
@@ -1607,7 +1607,7 @@ SPEC CHECKSUMS:
   React-utils: f242eb7e7889419d979ca0e1c02ccc0ea6e43b29
   ReactCommon: f7da14a8827b72704169a48c929bcde802698361
   releasebird-ios-sdk: 09c41dfaad47bc3a8e4fff9dabecab11bb9c34db
-  releasebird-reactnative-sdk: 25df16a5c1ef451e5a1fb0e9632ddd7f91a5730d
+  releasebird-reactnative-sdk: a0057f8d6a713a5833867c10fca339880b40cacd
   RNGestureHandler: 2282cfbcf86c360d29f44ace393203afd5c6cff7
   RNReanimated: 35f9ac9c3ac42d0497ebd1cce5c39d7687a8493e
   RNScreens: b32a9ff15bea7fcdbe5dff6477bc503f792b1208
