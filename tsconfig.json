@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-gleapsdk": ["./src/index"]
+      "releasebird-reactnative-sdk": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": true,
