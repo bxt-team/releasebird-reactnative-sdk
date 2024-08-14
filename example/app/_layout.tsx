@@ -21,7 +21,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
-      ReleasebirdSdk.initialize("2123");
+      ReleasebirdSdk.initialize("1cad2c1b6d7842fd937469ce3ac42ba2");
     }
   }, [loaded]);
 

@@ -19,7 +19,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(initialize:(NSString *)token)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-
+        [[Releasebird sharedInstance] showButton:token];
     });
 }
 
