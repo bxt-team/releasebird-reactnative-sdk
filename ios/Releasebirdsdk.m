@@ -16,10 +16,10 @@ RCT_EXPORT_MODULE()
 - (void)initSDK {
 }
 
-RCT_EXPORT_METHOD(initialize:(NSString *)token)
+RCT_EXPORT_METHOD(initialize:(NSString *)token showButton:(BOOL *)showButton)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[Releasebird sharedInstance] showButton:token];
+     [[Releasebird sharedInstance] initialize:token showButton:showButton];
     });
 }
 

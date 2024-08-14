@@ -19,7 +19,7 @@ export type ReleasebirdUserProperty = {
 };
 
 type ReleasebirdSdkType = {
-    initialize(token: string): void;
+    initialize(token: string, showButton: boolean): void;
     identify(userId: string, userProperties: ReleasebirdUserProperty): void;
 };
 
