@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm}"
 
   s.dependency "React-Core"
-  s.dependency "releasebird-ios-sdk", "1.0.6"
+  s.dependency "releasebird-ios-sdk", "1.0.17"
 end
