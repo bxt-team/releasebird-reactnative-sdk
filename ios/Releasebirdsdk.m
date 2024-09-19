@@ -16,7 +16,7 @@ RCT_EXPORT_MODULE()
 - (void)initSDK {
 }
 
-RCT_EXPORT_METHOD(initialize:(NSString *)token showButton:(BOOL *)showButton)
+RCT_EXPORT_METHOD(initialize:(NSString *)token showButton:(BOOL)showButton)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
      [[Releasebird sharedInstance] initialize:token showButton:showButton];
@@ -27,6 +27,13 @@ RCT_EXPORT_METHOD(identify:(NSString *)userId withUserProperties: (NSDictionary 
 {
     dispatch_async(dispatch_get_main_queue(), ^{
 
+    });
+}
+
+RCT_EXPORT_METHOD(showWidget)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [[Releasebird sharedInstance] showWidget];
     });
 }
 

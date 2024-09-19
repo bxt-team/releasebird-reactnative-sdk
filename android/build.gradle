@@ -22,7 +22,7 @@ def safeExtGet(prop, fallback) {
 android {
     def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION
     if (agpVersion.tokenize('.')[0].toInteger() >= 7) {
-        namespace = "com.releasebird.androidsdk"
+        namespace = "com.releasebirdreactnativesdk"
     }
 
     compileSdkVersion safeExtGet('Releasebirdsdk_compileSdkVersion', 33)
@@ -58,6 +58,6 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.releasebird:androidsdk:+'
+    implementation 'com.releasebird.androidsdk:androidsdk:+'
 
 }

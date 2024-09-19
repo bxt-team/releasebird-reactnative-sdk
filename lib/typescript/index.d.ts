@@ -14,6 +14,7 @@ export type ReleasebirdUserProperty = {
 type ReleasebirdSdkType = {
     initialize(token: string, showButton: boolean): void;
     identify(userId: string, userProperties: ReleasebirdUserProperty): void;
+    showWidget(): void;
 };
 declare const _default: ReleasebirdSdkType;
 export default _default;
