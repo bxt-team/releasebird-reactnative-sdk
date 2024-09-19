@@ -1,7 +1,5 @@
 package com.releasebirdreactnativesdk;
 
-import android.app.Application;
-
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -11,6 +9,7 @@ import com.facebook.react.module.annotations.ReactModule;
 
 import java.util.Map;
 
+@ReactModule(name = "Releasebirdsdk")
 public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
 
     public ReleasebirdsdkModule(ReactApplicationContext context) {
@@ -18,8 +17,8 @@ public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void initialize(String apiKey, Application application) {
-        com.releasebird.releasebird_sdk.Releasebird.init(apiKey, application);
+    public void initialize(String apiKey, boolean showButton) {
+        com.releasebird.releasebird_sdk.Releasebird.init(apiKey, getCurrentActivity().getApplication());
     }
 
     @ReactMethod
