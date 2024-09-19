@@ -11,7 +11,6 @@ import com.facebook.react.module.annotations.ReactModule;
 
 import java.util.Map;
 
-@ReactModule(name = "ReleasebirdSdkModule")
 public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
 
     public ReleasebirdsdkModule(ReactApplicationContext context) {
@@ -36,6 +35,6 @@ public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
     @NonNull
     @Override
     public String getName() {
-        return "ReleasebirdSdkModule";
+        return "Releasebirdsdk";
     }
 }
