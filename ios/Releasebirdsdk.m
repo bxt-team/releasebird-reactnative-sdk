@@ -23,10 +23,10 @@ RCT_EXPORT_METHOD(initialize:(NSString *)token showButton:(BOOL)showButton)
     });
 }
 
-RCT_EXPORT_METHOD(identify:(NSString *)userId withUserProperties: (NSDictionary *)userProperties)
+RCT_EXPORT_METHOD(identify:(NSString *)hash withUserProperties: (NSDictionary *)userProperties)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-
+        [[Releasebird sharedInstance] identify:[userProperties objectForKey:@"properties"]];
     });
 }
 
