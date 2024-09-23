@@ -5,9 +5,11 @@ import androidx.annotation.NonNull;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.module.annotations.ReactModule;
 
-import java.util.Map;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 @ReactModule(name = "Releasebirdsdk")
 public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
@@ -27,8 +29,14 @@ public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void identify(String hash, Map<String, Object> identifyJson) {
-        com.releasebird.releasebird_sdk.Releasebird.getInstance().identify(hash, identifyJson);
+    public void identify(String hash, ReadableMap identifyJson) {
+        try {
+            JSONObject jsonObject = RbirdHelper.convertMapToJson(identifyJson);
+            com.releasebird.releasebird_sdk.Releasebird.getInstance().identify(hash, RbirdHelper.jsonToMap(jsonObject.getJSONObject("properties")));
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @NonNull

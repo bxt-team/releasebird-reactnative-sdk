@@ -22,6 +22,21 @@ export default function RootLayout() {
     if (loaded) {
       SplashScreen.hideAsync();
       ReleasebirdSdk.initialize("1cad2c1b6d7842fd937469ce3ac42ba2", true);
+
+      const json = {
+        properties: {
+            firstname: "Christian",
+            lastname: "Zillmann",
+            email: "christian.zillmann@buildnext.io",
+            external_user_id: "65686f74b7d0b27e904d2ba6",
+            company: {
+              externalId: "65686f74b7d0b27e904d2ba7",
+              company_name: "buildnext"
+            }
+          }
+      };
+
+      ReleasebirdSdk.identify(null, json)
     }
   }, [loaded]);
 

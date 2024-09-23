@@ -7,20 +7,12 @@ const LINKING_ERROR =
     '- You are not using Expo managed workflow\n';
 
 export type ReleasebirdUserProperty = {
-    email?: string;
-    name?: string;
-    phone?: string;
-    value?: number;
-    sla?: number;
-    plan?: string;
-    companyName?: string;
-    companyId?: string;
-    customData?: { [key: string]: string | number };
+    properties?: { [key: string]: any };
 };
 
 type ReleasebirdSdkType = {
     initialize(token: string, showButton: boolean): void;
-    identify(userId: string, userProperties: ReleasebirdUserProperty): void;
+    identify(hash: string | null, userProperties: ReleasebirdUserProperty): void;
     showWidget(): void;
 };
 
