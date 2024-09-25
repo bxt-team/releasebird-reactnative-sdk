@@ -29,6 +29,11 @@ public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void logout() {
+        com.releasebird.releasebird_sdk.Releasebird.getInstance().logout(getCurrentActivity().getApplication());
+    }
+
+    @ReactMethod
     public void identify(String hash, ReadableMap identifyJson) {
         try {
             JSONObject jsonObject = RbirdHelper.convertMapToJson(identifyJson);

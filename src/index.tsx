@@ -14,6 +14,7 @@ type ReleasebirdSdkType = {
     initialize(token: string, showButton: boolean): void;
     identify(hash: string | null, userProperties: ReleasebirdUserProperty): void;
     showWidget(): void;
+    logout(): void;
 };
 
 const ReleasebirdSdk = NativeModules.Releasebirdsdk

@@ -37,6 +37,12 @@ RCT_EXPORT_METHOD(showWidget)
     });
 }
 
+RCT_EXPORT_METHOD(logout)
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [[Releasebird sharedInstance] logout];
+    });
+}
 
 - (void)dealloc
 {
