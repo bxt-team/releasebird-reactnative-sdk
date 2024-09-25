@@ -20,6 +20,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <Button title={'Show Widget'} onPress={() => ReleasebirdSdk.showWidget()}></Button>
+        <Button title={'Logout'} onPress={() => ReleasebirdSdk.logout()}></Button>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
