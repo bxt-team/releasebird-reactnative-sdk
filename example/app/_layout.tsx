@@ -24,7 +24,6 @@ export default function RootLayout() {
       ReleasebirdSdk.initialize("1cad2c1b6d7842fd937469ce3ac42ba2", true);
 
       const json = {
-        properties: {
             firstname: "Christian",
             lastname: "Zillmann",
             email: "christian.zillmann@buildnext.io",
@@ -33,10 +32,9 @@ export default function RootLayout() {
               externalId: "65686f74b7d0b27e904d2ba7",
               company_name: "buildnext"
             }
-          }
       };
 
-      ReleasebirdSdk.identify(null, json)
+      ReleasebirdSdk.identify(json, null)
     }
   }, [loaded]);
 

@@ -6,13 +6,10 @@ const LINKING_ERROR =
     '- You rebuilt the app after installing the package\n' +
     '- You are not using Expo managed workflow\n';
 
-export type ReleasebirdUserProperty = {
-    properties?: { [key: string]: any };
-};
 
 type ReleasebirdSdkType = {
     initialize(token: string, showButton: boolean): void;
-    identify(hash: string | null, userProperties: ReleasebirdUserProperty): void;
+    identify(userProperties: any, hash: string | null): void;
     showWidget(): void;
     logout(): void;
 };

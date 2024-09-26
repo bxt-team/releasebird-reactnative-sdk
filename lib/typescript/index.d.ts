@@ -1,11 +1,6 @@
-export type ReleasebirdUserProperty = {
-    properties?: {
-        [key: string]: any;
-    };
-};
 type ReleasebirdSdkType = {
     initialize(token: string, showButton: boolean): void;
-    identify(hash: string | null, userProperties: ReleasebirdUserProperty): void;
+    identify(userProperties: any, hash: string | null): void;
     showWidget(): void;
     logout(): void;
 };

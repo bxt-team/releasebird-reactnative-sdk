@@ -34,10 +34,10 @@ public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void identify(String hash, ReadableMap identifyJson) {
+    public void identify(ReadableMap identifyJson, String hash) {
         try {
             JSONObject jsonObject = RbirdHelper.convertMapToJson(identifyJson);
-            com.releasebird.releasebird_sdk.Releasebird.getInstance().identify(hash, RbirdHelper.jsonToMap(jsonObject.getJSONObject("properties")));
+            com.releasebird.releasebird_sdk.Releasebird.getInstance().identify(RbirdHelper.jsonToMap(jsonObject), hash);
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
