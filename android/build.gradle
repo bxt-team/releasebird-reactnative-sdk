@@ -58,6 +58,6 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'com.releasebird.androidsdk:androidsdk:+'
+    implementation 'com.releasebird.androidsdk:androidsdk:1.0.3'
 
 }

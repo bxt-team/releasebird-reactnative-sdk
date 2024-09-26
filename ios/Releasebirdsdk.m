@@ -26,7 +26,7 @@ RCT_EXPORT_METHOD(initialize:(NSString *)token showButton:(BOOL)showButton)
 RCT_EXPORT_METHOD(identify:(NSDictionary *)userProperties andHash:(NSString *)hash)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[Releasebird sharedInstance] identify:userProperties andHash:hash];
+        [[Releasebird sharedInstance] identify:userProperties hash:hash];
     });
 }
 
