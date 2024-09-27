@@ -20,7 +20,7 @@ public class ReleasebirdsdkModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void initialize(String apiKey, boolean showButton) {
-        com.releasebird.releasebird_sdk.Releasebird.init(apiKey, getCurrentActivity().getApplication());
+        com.releasebird.releasebird_sdk.Releasebird.init(apiKey, getCurrentActivity().getApplication(), showButton);
     }
 
     @ReactMethod
